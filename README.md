@@ -1,3 +1,3 @@
-# davidWood2009.github.io
+# David Wood
 
-A GitHub page for me, to use for whatever I fancy!
+I'm a software engineer who leans towards the front-end side of life.
