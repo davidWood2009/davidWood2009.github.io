@@ -48,6 +48,8 @@ function App() {
       <BrowserRouter>
         <div className="text-center">
           <NavBar theme={theme} />
+          <hr className="m-0" />
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
