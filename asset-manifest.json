@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/davidwood0.github.io/static/css/main.bfc87c49.css",
+    "main.js": "/davidwood0.github.io/static/js/main.feccea1d.js",
+    "static/js/787.000591ad.chunk.js": "/davidwood0.github.io/static/js/787.000591ad.chunk.js",
+    "static/media/me-edited-200.jpeg": "/davidwood0.github.io/static/media/me-edited-200.97c544754c9a8c83fb2e.jpeg",
+    "index.html": "/davidwood0.github.io/index.html",
+    "main.bfc87c49.css.map": "/davidwood0.github.io/static/css/main.bfc87c49.css.map",
+    "main.feccea1d.js.map": "/davidwood0.github.io/static/js/main.feccea1d.js.map",
+    "787.000591ad.chunk.js.map": "/davidwood0.github.io/static/js/787.000591ad.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bfc87c49.css",
+    "static/js/main.feccea1d.js"
+  ]
+}
