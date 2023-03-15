@@ -1,17 +1,12 @@
 import React from "react";
-import { Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import "./leetcode-nav-item.css";
 
 const LeetcodeNavItem = (props) => {
   return (
-    <Nav.Link
-      as={Link}
-      eventKey={props.problemNumber}
-      to={`/${props.problemNumber}`}
-      className="p-0"
-    >
+    <Button className="nav-link p-0" variant="link" onClick={props.onClick}>
       {props.problemNumber}. {props.problemName}
-    </Nav.Link>
+    </Button>
   );
 };
 

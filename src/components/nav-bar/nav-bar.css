@@ -1,20 +1,3 @@
-/* a.nav-link.active.custom {
-  font-weight: bolder;
-  text-decoration: underline;
-  text-decoration-color: var(--link-color);
-  color: var(--font-color);
+.logo {
+  position: absolute;
 }
-
-a.nav-link.custom {
-  color: var(--font-color-2);
-}
-
-a.nav-link.custom:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--link-color);
-}
-
-button.navbar-toggler {
-  background-color: var(--background-color-3);
-  color: var(--link-color);
-} */

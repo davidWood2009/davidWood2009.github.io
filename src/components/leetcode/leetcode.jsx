@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -7,32 +7,39 @@ import Col from "react-bootstrap/Col";
 import "./leetcode.css";
 import Sidebar from "./sidebar";
 import LeetcodeNavItem from "./leetcode-nav-item";
-import DataService from "../../services/data-service";
 import { problemData } from "../../data/data";
+import LeetcodeContent from "./leetcode-content";
 
 const Leetcode = (props) => {
-  // const listItems = (
-  //   <LeetcodeNavItem problemNumber="problem1"></LeetcodeNavItem>
-  // );
+  const [problemSelected, setProblemSelected] = useState({});
+
+  const navItemClicked = (problem) => {
+    setProblemSelected(problem);
+  };
 
   return (
     <Container fluid>
-      <Row className="justify-content-left">
-        <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
-          <p className="m-1">Problems</p>
-          <Sidebar>
-            {problemData.map((data, key) => {
-              return (
-                <LeetcodeNavItem
-                  problemName={data.name}
-                  problemNumber={data.number}
-                ></LeetcodeNavItem>
-              );
-            })}
-          </Sidebar>
+      <Row className="flex-nowrap ms-1 p-0">
+        <Col className="p-0" xs={2} sm={2}>
+          <Container className="p-0">
+            <Sidebar>
+              {problemData.map((data, key) => {
+                return (
+                  <LeetcodeNavItem
+                    key={data.number}
+                    problemName={data.name}
+                    problemNumber={data.number}
+                    onClick={() => navItemClicked(data)}
+                  ></LeetcodeNavItem>
+                );
+              })}
+            </Sidebar>
+          </Container>
         </Col>
-        <Col>
-          <div>Content</div>
+        <Col className="p-0">
+          <Container className="p-0">
+            <LeetcodeContent problem={problemSelected} />
+          </Container>
         </Col>
       </Row>
     </Container>

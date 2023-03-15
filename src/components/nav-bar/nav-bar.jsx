@@ -7,13 +7,13 @@ import { Link } from "react-router-dom";
 
 const NavBar = (props) => {
   return (
-    <Navbar className="p-0" bg={props.theme} variant={props.theme}>
-      <Container className="justify-content-center" fluid>
-        {/* <Navbar.Brand className="p-2" href="#home">
-          <LogoComponent />
+    <Navbar className="p-0 m-2">
+      <Container className="m-0 p-0" fluid>
+        {/* <Navbar.Brand className="p-0 m-0" href="#home">
+          <LogoComponent className="logo p-0 m-1" />
         </Navbar.Brand> */}
         <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse className="justify-content-center" id="navbarScroll">
+        <Navbar.Collapse className="justify-content-left" id="navbarScroll">
           <Nav defaultActiveKey="home" className="" navbarScroll>
             <Nav.Link as={Link} eventKey="home" to="/home">
               Home

@@ -2,11 +2,7 @@ import React, { Component } from "react";
 class GithubButton extends Component {
   state = {};
   render() {
-    return (
-      <button className="btn btn-dark" type="button">
-        <i className="fa-brands fa-github"></i>
-      </button>
-    );
+    return <Button className="btn btn-dark" type="button"></Button>;
   }
 }
 
