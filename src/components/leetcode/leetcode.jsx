@@ -19,7 +19,6 @@ const Leetcode = (props) => {
     <Container fluid>
       <Row className="justify-content-left">
         <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
-          <p className="m-1">Problems</p>
           <Sidebar>
             {problemData.map((data, key) => {
               return (
