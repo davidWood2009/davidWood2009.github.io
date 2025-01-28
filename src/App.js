@@ -14,14 +14,13 @@ import Leetcode from "./components/leetcode/leetcode";
 import Projects from "./components/projects";
 import About from "./components/about";
 import { Container, Button } from "react-bootstrap";
-import LogoComponent from "./components/logo/logo-component";
-import LeetcodeContent from "./components/leetcode/leetcode-content";
 
 function App() {
   const [theme, setTheme] = useState("dark");
 
   // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
+    console.log("theme: " + theme);
     document.documentElement.setAttribute("data-bs-theme", theme);
     // Update the document title using the browser API
     setLocal(theme);
@@ -47,20 +46,18 @@ function App() {
   return (
     <Container data-bs-theme={theme} fluid>
       <BrowserRouter>
-        <div>
-          <div className="text-center">
-            <NavBar theme={theme} />
+        <div className="text-center">
+          <NavBar theme={theme} />
+          <hr className="m-0" />
 
-            <Routes>
-              <Route path="/home" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/leetcode" element={<Leetcode />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="*" element={<Home />} />
-            </Routes>
-          </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/leetcode" element={<Leetcode />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+          <Button>hello</Button>
         </div>
-
         <footer className="d-flex flex-row justify-content-center footer">
           <DarkMode
             onToggleTheme={(val) => setTheme(val)}

@@ -10,15 +10,3 @@
 .App {
   text-align: center;
 }
-
-.logo {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 5;
-}
-
-a.nav-link,
-p {
-  font-family: "Courier New", Courier, monospace;
-}
