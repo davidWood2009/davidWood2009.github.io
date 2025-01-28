@@ -1,12 +1,21 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { MatTabsModule } from '@angular/material/tabs';
+import { HomeComponent } from "./home/home.component";
+import { ProjectsComponent } from "./projects/projects.component";
+import { AboutComponent } from "./about/about.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [RouterModule, MatTabsModule, HomeComponent, ProjectsComponent, AboutComponent],
 })
 export class AppComponent {
-  title = 'davidwood0.github.io';
+  links = ['Home', 'Projects', 'About'];
+  activeLink = this.links[0];
+
+  addLink() {
+    this.links.push(`Link ${this.links.length + 1}`);
+  }
 }
